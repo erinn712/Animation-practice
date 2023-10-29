@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <!-- CSS連結 -->
+  <link rel="stylesheet" href="./css/aos.css">
+  <!-- AOS連結 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- 字型連結 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <h1>AOS動畫效果</h1>
+  </header>
+  
+  <!-- 第一個 -->
+  <div class="container">
+    <div class="box">
+      <img src="./images/1.jpg" alt="">
+      <div class="description">
+        <h3>無動畫</h3>
+        <p>無動畫效果</p>
+        <a href="https://michalsnik.github.io/aos/">以下動畫套用AOS效果，在JS加入</a><br>
+        <a href="https://michalsnik.github.io/aos/">AOS.init({</a><br>
+        <a href="https://michalsnik.github.io/aos/">  duration: 800,</a><br>
+        <a href="https://michalsnik.github.io/aos/">  anchorPlacement: 'top-center'})</a><br>
+        <a href="https://michalsnik.github.io/aos/">設定動畫時間0.8秒、碰觸到頂端才觸發動畫</a><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第二個效果 -->
+  <div class="container" data-aos="fade-right" data-aos-anchor-placement="center-bottom">
+    <div class="box">
+      <img src="./images/2.jpg" alt="">
+      <div class="description">
+        <h3>由右側淡入</h3>
+        <p>fade-right</p>
+        <a href="https://michalsnik.github.io/aos/">整層div加入fade-right class</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三個效果 -->
+  <div class="container" data-aos="fade-down">
+    <div class="box">
+      <img src="./images/3.jpg" alt="" data-aos="flip-left">
+      <div class="description">
+        <h3>由下方淡入+照片由左翻轉</h3>
+        <p>fade-down、flip-left</p>
+        <a href="https://michalsnik.github.io/aos/">外層div加入fade-down class、照片加入flip-left class</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第四個效果 -->
+  <div class="container" data-aos="fade-up">
+    <div class="box">
+      <img src="./images/4.jpg" alt="" data-aos="zoom-in">
+      <div class="description">
+        <h3>由上方淡入+照片放大</h3>
+        <p>fade-up、zoom-in</p>
+        <a href="https://michalsnik.github.io/aos/">外層div加入fade-up class、照片加入zoom-in class</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第五個效果 -->
+  <div class="container" data-aos="slide-right">
+    <div class="box">
+      <img src="./images/5.jpg" alt="" data-aos="slide-right" data-aos-duration="2000">
+      <div class="description">
+        <h3>由右側滑入+照片另外設置動畫完成秒數</h3>
+        <p>slide-right</p>
+        <a href="https://michalsnik.github.io/aos/">外層div及照片皆加入slide-right class</a><br>
+        <a href="https://michalsnik.github.io/aos/">照片另外設置data-aos-duration="2000"</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 加入AOS Script
+    AOS.init({
+      // Global settings:
+      disable: false,
+      startEvent: 'DOMContentLoaded',
+      initClassName: 'aos-init',
+      animatedClassName: 'aos-animate',
+      useClassNames: false,
+      disableMutationObserver: false,
+      debounceDelay: 50,
+      throttleDelay: 99,
+
+
+      // 以下也可以用data-aos-*放入element來設定樣式
+      // 完成動畫所需的時間，範圍從 0-3000 
+      duration: 800,
+      // 動畫觸發的位置
+      anchorPlacement: 'top-center',
+
+      // 網頁往下滑時與視窗大小底端距離多長才會出現動畫效果，但不要設0，感覺會跟沒動畫一樣。
+      // offset: 120,
+
+      // 延遲時間，範圍從 0-3000，通常不會設定，設定時間太長會有網頁太慢載入的感覺
+      // delay: 0,
+
+      // 400、600、800毫秒蠻常使用，建議不要超過1秒以上
+      // duration: 400,
+
+      // 動畫曲線
+      // easing: 'ease',
+
+      // 動畫是否只跑一次
+      // once: false,
+
+      // mirror: false,
+    });
+  </script>
+</body>
+</html>
