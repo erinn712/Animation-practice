@@ -34,6 +34,20 @@ img {
 
 a {
   text-decoration: none;
-  color: #AE445A;
+  color: #8f3245;
+}
+
+.back {
+  width: 200px;
+  background-color: #641b1b;
+  color: #ebaab7;
   font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+.a-back {
+  text-decoration: none;
+  color: #ebaab7;
 }

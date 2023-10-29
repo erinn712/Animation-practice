@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Animation</title>
+    <link rel="stylesheet" href="./css/gsap.css" />
+    <!-- 載入GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+      <!-- 字型連結 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300&display=swap" rel="stylesheet">
+
+  </head>
+  <header>
+    <h1>GSAP Animation</h1>
+  </header>
+  <body>
+    <div class="section1">
+      <div class="subtitle">Basic</div>
+      <div class="kind">
+        <div class="box" id="box1">set</div>
+        <div class="intro1">gsap.set 定義初始狀態 須搭配其他語法</div>
+      </div>
+      <div class="kind">
+        <div class="box" id="box2">to</div>
+        <div class="intro1">gsap.to 位移100px 動畫時間2秒</div>
+      </div>
+      <div class="kind">
+        <div class="box" id="box3">from</div>
+        <div class="intro1">gsap.from 反向動畫</div>
+      </div>
+      <div class="kind">
+        <div class="box" id="box4">fromTo</div>
+        <div class="intro1">gsap.fromTo 需傳入兩個物件 當前狀態及目標狀態</div>
+      </div>
+      <div class="kind">
+        <div class="box" id="box5">Repeat</div>
+        <div class="intro1">gsap.to 參數加入repeat: -1 重複執行動畫</div>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="subtitle">Selector</div>
+      <div class="kind">
+        <div class="box" id="box6">selector</div>
+        <div class="intro2">使用document.querySelector( ) 選取 加入旋轉與縮放效果</div>
+      </div>
+      <div class="kind">
+        <div class="box box-all" id="box7">All</div>
+        <div class="intro1">使用document.querySelectorAll( ) 同時選取</div>
+      </div>
+      <div class="kind">
+        <div class="box box-all" id="box8">All</div>
+        <div class="intro1">使用document.querySelectorAll( ) 同時選取</div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="subtitle">Scroll</div>
+      <div class="kind1">
+        <div class="box box-blue">Scroll</div>
+        <div class="intro1">加入ScrollTrigger</div>
+      </div>
+      <div class="kind1">
+        <div class="box box-gray">Scroll</div>
+        <div class="intro1">加入ScrollTrigger</div>
+      </div>
+    </div>
+
+    <!-- 回主選單 -->
+    <div class="back"><a href="./index.html">BACK</a></div>
+
+    <script src="./js/gsap.js"></script>
+  </body>
+</html>
