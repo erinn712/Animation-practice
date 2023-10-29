@@ -1,0 +1,154 @@
+/* @keyframes說明要做動畫效果，動畫效果的名稱為example */
+
+/* example1原始樣式 */
+.example1Css {
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  background-color: red;
+  border-radius: 25px;
+  position: relative;
+  left: -100px
+}
+
+/* 註冊example1動畫名稱 */
+.example1 {
+  /*  元素樣式  */
+  position: relative;
+  /*  設定相同的名稱example註冊這個效果  */
+  animation-name: example1;
+  /*  執行過程秒數  */
+  animation-duration: 2s;
+  /*  backwards停在第一個位置，forwards留在最後一個位置(通常用於動畫消失在螢幕外)  */
+  animation-fill-mode: both;
+  margin: 50px auto;
+  border-radius: 25px;
+}
+
+/* .example1動畫效果 */
+@keyframes example1 {
+  from {
+    left: -100px;
+    top: 0px;
+    rotate: 0deg;
+  }
+  to {
+    left: 100px;
+    top: 0px;
+    rotate: 45deg;
+  }
+}
+
+
+/* example2原始樣式 */
+.example2Css {
+  /*  元素樣式  */
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+  background-color: red;
+  border-radius: 25px;
+}
+
+/* 註冊example1動畫名稱 */
+.example2 {
+  position: relative;
+  /*  設定相同的名稱example註冊這個效果  */
+  animation-name: example2;
+  /*  執行過程秒數  */
+  animation-duration: 8s;
+  /*  重複執行  */
+  animation-iteration-count: infinite;
+  margin: 50px auto;
+  border-radius: 25px;
+}
+
+/* .example2動畫效果 */
+@keyframes example2 {
+  /* 百分比：秒數 */
+  0% {
+    background-color: pink;
+    left: -100px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 100px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: -100px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: -100px;
+    top: 0px;
+  }
+}
+
+
+/* transition-timing-function */
+/* linear // 平均速度
+   ease // 快入緩出 (預設)
+   ease-in // 緩入
+   ease-out // 緩出
+   ease-in-out // 緩入緩出
+   cubic-bezier // 自定義貝茲曲線 */
+
+/* 其他背景區域樣式 */
+.background {
+  background-color: gray; 
+  background-attachment: fixed;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  padding: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color:#2c3622;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+#text-em {
+  font-size:30px;
+  color: #eed0ae;
+}
+
+.anima-block {
+  background-color: #8e9a81;
+  height: 750px;
+  padding: 20px;
+}
+
+#anima-text {
+  font-weight:bold;
+  color: #252B48;
+  margin: 0px auto;
+  padding: 20px 20px;
+}
+
+.anima-example {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bottom {
+  background-color: #CEDEBD;
+  height: 200px;
+}
+
