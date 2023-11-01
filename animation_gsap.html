@@ -8,6 +8,7 @@
     <!-- 載入GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <!-- 字型連結 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,15 +60,114 @@
     </div>
 
     <div class="section3">
-      <div class="subtitle">Scroll</div>
-      <div class="kind1">
+      <div class="subtitle">加入ScrollTrigger(一)</div>
+      <div class="kind2">
         <div class="box box-blue">Scroll</div>
-        <div class="intro1">加入ScrollTrigger</div>
+        <div class="intro1">toggleActions: "play none reverse reverse"</div>
+      </div>
+      <div class="kind2">
+        <div class="box box-gray">Scroll</div>
+        <div class="intro1">toggleActions: "play none reverse reverse"</div>
+      </div>
+    </div>
+
+        <div class="section3">
+      <div class="subtitle">加入ScrollTrigger(二)</div>
+      <div class="kind2">
+        <div class="box box-blue" id="scroll-pause">Scroll</div>
+        <div class="intro1">toggleActions: "play pause reverse reverse"</div>
+      </div>
+      <div class="kind2">
+        <div class="box box-gray" id="scroll-pause">Scroll</div>
+        <div class="intro1">toggleActions: "play pause reverse reverse"</div>
+      </div>
+    </div>
+
+            <div class="section3">
+      <div class="subtitle">加入ScrollTrigger(三)</div>
+      <div class="kind2">
+        <div class="box box-blue" id="scroll-scrub">Scrub</div>
+        <div class="intro1">scrub: true</div>
+      </div>
+      <div class="kind2">
+        <div class="box box-gray" id="scroll-scrub">Scrub</div>
+        <div class="intro1">scrub: true</div>
+      </div>
+    </div>
+
+    <div class="section4">
+      <div class="subtitle">自訂屬性</div>
+      <div class="kind2">
+        <div class="box" id="box9">Custom</div>
+        <div class="intro1">使用自定義屬性</div>
+      </div>
+    </div>
+
+    <div class="section5">
+      <div class="subtitle">Timeline(依序執行) 與 X軸、Y軸</div>
+      <div>
+        <div class="box" id="box10"></div>
+        <div class="border-x"></div>
+        <div class="border-y"></div>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="subtitle">ease改變動畫速度</div>
+      <div class="kind1">
+        <div class="box" id="box-elastic-out">elastic</div>
+        <div class="intro1">ease屬性：elastic.out</div>
       </div>
       <div class="kind1">
-        <div class="box box-gray">Scroll</div>
-        <div class="intro1">加入ScrollTrigger</div>
+        <div class="box" id="box-bounce-out">bounce</div>
+        <div class="intro1">ease屬性：bounce.out</div>
       </div>
+    </div>
+
+    <div class="section-marquee">
+      <div class="subtitle">跑馬燈</div>
+      <p class="marquee-p">=用GSAP玩跑馬燈=用GSAP玩跑馬燈=用GSAP玩跑馬燈</p>
+      <div class="marquee-container">
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+        <div class="marquee-box"></div>
+      </div>
+      </div>
+    </div>
+
+        <div class="section-control">
+      <div class="subtitle">動畫控制</div>
+      <div class="kind1">
+        <div class="box" class="control" id="control">control</div>
+      </div>
+      <div class="btn-all">
+        <button class="btn-control" id="play">播放</button>
+        <button class="btn-control" id="pause">暫停</button>
+        <button class="btn-control" id="resume">恢復</button>
+        <button class="btn-control" id="reverse">倒轉</button>
+        <button class="btn-control" id="restart">重新開始</button>
+        <button class="btn-control" id="seek">到第1秒</button>
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="subtitle">Plugins</div>
+      <p>方式一：</p>
+      <p>載入CDN</p>
+      <p>gsap.registerPlugin(Plugin name, ..., ...)</p>
+      <br>
+      <p>方式二：</p>
+      <p>npm</p>
+      <p>import { gsap } from "gsap";</p>
+      <p>import { Plugin name } from "gsap/Plugin name";</p>
     </div>
 
     <!-- 回主選單 -->

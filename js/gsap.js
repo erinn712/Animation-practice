@@ -34,10 +34,163 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to([".box-blue", ".box-gray"], {
   scrollTrigger: {
     trigger: ".box-gray",
-    scrub: false,
+    start: "top center",
+    toggleActions: "play none reverse reverse",
+    // toggleActions: "onEnter onLeave onEnterBack onLeaveBack"
   },
-  x: 100,
+  x: 200,
   duration: 2,
   backgroundColor: "red",
 });
 
+gsap.to("#scroll-pause", {
+  scrollTrigger: {
+    trigger: "#scroll-pause",
+    start: "top center",
+    toggleActions: "play pause reverse reverse",
+  },
+  x: 200,
+  duration: 2,
+  backgroundColor: "red",
+});
+
+gsap.to("#scroll-scrub", {
+  scrollTrigger: {
+    trigger: "#scroll-scrub",
+    scrub: true,
+    start: "top center",
+  },
+  x: 200,
+  duration: 2,
+  backgroundColor: "red",
+});
+
+// 自訂屬性
+gsap.registerPlugin({
+  name: "myCustomProperty",
+  init(target, value) {
+    gsap.to(target, {
+      scrollTrigger: {
+        trigger: ".box-gray",
+        scrub: false,
+      },
+      x: value.x,
+      backgroundColor: value.backgroundColor,
+      rotate: value.rotate,
+      duration: value.duration,
+    });
+  }
+});
+
+gsap.to("#box9", {
+  myCustomProperty: {
+    x: 200,
+    backgroundColor: 'red',
+    rotate: 720,
+    duration: 3
+  }
+});
+
+
+// Timeline(動畫依序執行)加上X軸、Y軸
+// Timeline可加上第三個參數：tl.to('選擇器',{執行動畫},'position')
+// start：指定動畫開始時間為時間軸的開始時間
+// end：指定動畫開始時間為時間軸的結束時間
+// +=1：指定動畫開始時間為時間軸的開始時間 + 1 秒
+// -1：指定動畫開始時間為時間軸的開始時間 - 1 秒
+// +=0.5：指定動畫開始時間為時間軸的開始時間 + 0.5 秒
+// +=0.25：指定動畫開始時間為時間軸的開始時間 + 0.25 秒
+// <：指定動畫開始時間為時間軸上前一個動畫的結束時間
+// >：指定動畫開始時間為時間軸上前一個動畫的開始時間
+let tl = gsap.timeline({repeat: -1, repeatDelay: 1, yoyo: -1})
+
+tl.to("#box10", {
+  x: 100,
+  y: 250,
+  duration: 2,
+})
+
+  // 回到原點
+  .to("#box10", {
+    x: 305,
+    y: 120,
+    duration: 3,
+  })
+
+  .to("#box10", {
+    x: 100,
+    y: 10,
+    duration: 2,
+  })
+
+  .to("#box10", {
+    x: 305,
+    y: 120,
+    duration: 3,
+  })
+
+  .to("#box10", {
+    x: 510,
+    y: 250,
+    duration: 2,
+  })
+
+  .to("#box10", {
+    x: 305,
+    y: 120,
+    duration: 3,
+  })
+
+  .to("#box10", {
+    x: 510,
+    y: 10,
+    duration: 2,
+  });
+
+// ease改變動畫速度
+gsap.to("#box-elastic-out", {
+  scrollTrigger: {
+    trigger: "#box-elastic-out",
+    scrub: false,
+  },
+  x: 100,
+  duration: 3,
+  ease: "elastic.out",
+});
+
+gsap.to("#box-bounce-out", {
+  scrollTrigger: {
+    trigger: "#box-elastic-out",
+    scrub: false,
+  },
+  x: 100,
+  duration: 2,
+  ease: "bounce.out",
+});
+
+
+// 跑馬燈
+gsap.to([".marquee-p", ".marquee-box"], {
+  x: -800,
+  duration: 8,
+  repeat: -1,
+  ease: 'none',
+  yoyo: -1,
+})
+
+
+// 動畫控制
+
+let tween = gsap.to('#control', {
+  x: 600,
+  duration: 5,
+  rotate: 720,
+  ease: 'none'
+})
+
+document.querySelector("#play").onclick = () => tween.play();
+document.querySelector("#pause").onclick = () => tween.pause();
+document.querySelector("#resume").onclick = () => tween.resume();
+document.querySelector("#reverse").onclick = () => tween.reverse();
+document.querySelector("#restart").onclick = () => tween.restart();
+document.querySelector("#seek").onclick = () => tween.seek(1);

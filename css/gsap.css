@@ -8,6 +8,11 @@ h1 {
   margin: 0px;
 }
 
+p {
+  font-family: 'Noto Sans TC', sans-serif;
+  margin: 0px 20px;
+}
+
 .subtitle {
   text-align: center;
   font-family: 'Noto Sans TC', sans-serif;
@@ -44,6 +49,39 @@ body {
   border-radius: 30px;
 }
 
+.section4 {
+  background-color: #C5D8A4;
+  width: 700px;
+  height: 150px;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+
+.section5 {
+  background-color: #C5D8A4;
+  width: 700px;
+  height: 400px;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+
+.section-marquee {
+  background-color: #C5D8A4;
+  width: 700px;
+  height: 250px;
+  margin: 30px auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.section-control {
+  background-color: #C5D8A4;
+  width: 700px;
+  height: 250px;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+
 .kind {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -58,6 +96,13 @@ body {
   line-height: 75px;
 }
 
+.kind2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px; 
+  line-height: 75px;
+}
+
 .box {
   background-color: #FAC70B;
   width: 75px;
@@ -68,6 +113,29 @@ body {
   color: white;
   margin: 10px;
   font-family: 'Noto Sans TC', sans-serif;
+}
+
+.marquee-p {
+  color: #caa060;
+  text-align: center;
+  line-height: 75px;
+  margin: 5px;
+  font-size: 30px;
+  font-family: 'Noto Sans TC', sans-serif;
+  white-space: nowrap;
+}
+
+.marquee-container {
+  display: flex;
+}
+
+.marquee-box {
+  background-color: #caa060;
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  margin: 5px;
+  display: flex;
 }
 
 #box6 {
@@ -111,4 +179,50 @@ body {
 a {
   text-decoration: none;
   color: #ebaab7;
+}
+
+.border-x {
+  width: 500px;
+  height: 5px;
+  background-color: #330d0d;
+  /* position: absolute; */
+  translate: 100px 70px;
+}
+
+.border-y {
+  width: 5px;
+  height: 330px;
+  background-color: #330d0d;
+  translate: 350px -90px;
+}
+
+#box10 {
+  translate: 305px 120px;
+  z-index: 10;
+  position: relative;
+}
+
+.btn-control {
+  width: 90px;
+  height: 50px;
+  background-color: #1b7e78;
+  border-radius: 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #fdfdfd;
+  line-height: 50px;
+  align-items: center;
+  font-size: large;
+  border: 0px;
+  margin: 5px;
+}
+
+.btn-control:hover {
+  background-color: #0e504b;
+  font-weight: 600;
+}
+
+.btn-all {
+  margin: 20px 30px;
+  display: flex;
+  justify-content: space-between;
 }
